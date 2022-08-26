@@ -34,17 +34,25 @@ public class TimeCalc {
 		
 		int songTotal = 0;
 		String another;
-
+				
 		do {
 			System.out.println("What is the length of the next song's minutes?");
 			int minutesNext = input.nextInt();
 			System.out.println("What is the length of the next song's seconds?");
 			int secondsNext = input.nextInt();
-			int songNextSum = (minutesNext * 60) + secondsNext + songTotal;
-			songTotal = song1Sum + songNextSum;
-			System.out.println("Would you like to add another song? (y/n)");
+			int songNextSum = (minutesNext * 60) + secondsNext;
+			System.out.println("Would you like to add another song? (yes/no)");
 			another = input.next();
-		} while (another != "n");
+			if(another == "no") {
+				break;
+			}
+			else if (songTotal == 0) {
+				songTotal = song1Sum + songNextSum;
+			}
+			else {
+				songTotal = songTotal + songNextSum;
+			}
+		} while (true);
 		
 		int playlistTotalHrs = songTotal / (60 * 60);
 		int playlistTotalMin = songTotal % (60 * 60);
