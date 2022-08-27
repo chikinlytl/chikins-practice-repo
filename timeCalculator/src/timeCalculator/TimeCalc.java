@@ -36,7 +36,7 @@ public class TimeCalc {
 		int songCount = 1;
 				
 		do {
-			if (songCount = 1) {
+			if (songCount == 1) {
 				songTotal = 0;
 			}
 			songCount++;
