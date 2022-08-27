@@ -32,14 +32,9 @@ public class TimeCalc {
 		int song1Sec = input.nextInt();
 		int song1Sum = (song1Min * 60) + song1Sec;
 		
-		int songTotal;
-		int songCount = 1;
+		int songTotal = song1Sum;
 				
 		do {
-			if (songCount == 1) {
-				songTotal = song1Sum;
-			}
-			songCount++;
 			System.out.println("What is the length of the next song's minutes?");
 			int minutesNext = input.nextInt();
 			System.out.println("What is the length of the next song's seconds?");
