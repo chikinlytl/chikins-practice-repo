@@ -32,9 +32,14 @@ public class TimeCalc {
 		int song1Sec = input.nextInt();
 		int song1Sum = (song1Min * 60) + song1Sec;
 		
-		int songTotal = song1Sum;
+		int songTotal;
+		int songCount = 1;
 				
 		do {
+			if (songCount = 1) {
+				songTotal = 0;
+			}
+			songCount++;
 			System.out.println("What is the length of the next song's minutes?");
 			int minutesNext = input.nextInt();
 			System.out.println("What is the length of the next song's seconds?");
@@ -50,9 +55,9 @@ public class TimeCalc {
 			}
 		} while (true);
 		
-		int playlistTotalHrs = songTotal / (60 * 60);
-		int playlistTotalMin = songTotal % (60 * 60);
-		int playlistTotalSec = playlistTotalMin % 60;
+		int playlistTotalHrs = (songTotal / 60) / 60);
+		int playlistTotalMin = (songTotal / 60) % 60;
+		int playlistTotalSec = songTotal % 60;
 		
 		System.out.println("Your playlist is " + playlistTotalHrs + " hours and " + playlistTotalMin + " minutes and " + playlistTotalSec + " seconds long.");
 	} 
