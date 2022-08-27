@@ -42,7 +42,7 @@ public class TimeCalc {
 			int songNextSum = (minutesNext * 60) + secondsNext;
 			System.out.println("Would you like to add another song? (yes/no)");
 			String another = input.next();
-			if(another == "no") {
+			if(another.equals("no")) {
 				break;
 			}
 			else {
